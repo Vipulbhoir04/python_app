@@ -247,7 +247,8 @@ def calculate_c():
                 ch3=resvar3-10
                 ch3res=round(ch3,4)
         elif(resvar3==100):
-                #dentry3.set('OK')
+                dentryvar3.set('OK')
+                ndentryvar3.set('OK')
                 ch3=resvar3-100
                 ch3res=round(ch3,4)
         elif(resvar3>10):
@@ -274,6 +275,8 @@ def calculate_c():
                 ch5=resvar5-99
                 ch5res=round(ch5,4)
         elif(resvar5==100):
+                dentryvar5.set('OK')
+                ndentryvar5.set('OK')
                 ch5=resvar5-100
                 ch5res=round(ch5,4)
         elif(resvar5<98):
@@ -306,11 +309,15 @@ transaction_details_frame5.grid(row=3,column=2)
 
 #calculate %C button
 calc_btn = Button(transaction_details_frame5,text = "Calculate %C",command=calculate_c,font=("lucida",12,"bold"),bd = 7,relief = GROOVE)
-calc_btn.grid(row = 1,column = 4,ipadx = 20,padx = 30)
+calc_btn.grid(row = 1,column = 1,ipadx = 20,padx = 10)
+
+#result button
+res_btn = Button(transaction_details_frame5, text="Result", command="3", font=("lucida",12,"bold"),bd = 7, relief = GROOVE)
+res_btn.grid(row = 1,column = 2,ipadx = 20, padx = 10)
 
 #exit button       
 exit_btn = Button(transaction_details_frame5,text = "Exit",font=("lucida",12,"bold"),bd = 7,relief = GROOVE,command = exit)
-exit_btn.grid(row = 1,column = 8,ipadx = 20)
+exit_btn.grid(row = 1,column = 3,ipadx = 20, padx = 10)
 
 #database System
 
