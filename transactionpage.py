@@ -61,15 +61,15 @@ variableFrame.pack()
 #IP
 transaction_details_frame1=LabelFrame(variableFrame,text='IP VAR',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame1.grid(row=0,column=0)
-var1label=Label(transaction_details_frame1,text='VAR 1',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var1label=Label(transaction_details_frame1,text='NT',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var1label.grid(row=0,column=0,pady=14,padx=7)
-var2label=Label(transaction_details_frame1,text='VAR 2',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var2label=Label(transaction_details_frame1,text='RU',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var2label.grid(row=1,column=0,pady=14,padx=7)
-var3label=Label(transaction_details_frame1,text='VAR 3',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var3label=Label(transaction_details_frame1,text='CBE',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var3label.grid(row=2,column=0,pady=14,padx=7)
-var4label=Label(transaction_details_frame1,text='VAR 4',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var4label=Label(transaction_details_frame1,text='OUB',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var4label.grid(row=3,column=0,pady=14,padx=7)
-var5label=Label(transaction_details_frame1,text='VAR 5',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var5label=Label(transaction_details_frame1,text='PD ',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var5label.grid(row=4,column=0,pady=14,padx=7)
 
 
@@ -180,7 +180,7 @@ def calculate_c():
                 ch3res=round(ch3,4)
         elif(resvar3==100):
                 dentryvar3.set('OK')
-                ndentryvar3.set('OK')
+                ndentryvar3.set('NA')
                 ch3=resvar3-100
                 ch3res=round(ch3,4)
         elif(resvar3>10):
@@ -195,7 +195,7 @@ def calculate_c():
                 ch4res=round(ch4,4)
         elif(resvar4==100):
                 dentryvar4.set('OK')
-                ndentryvar4.set('OK')
+                ndentryvar4.set('NA')
                 ch4=resvar4-100
                 ch4res=round(ch4,4)
         elif(resvar4>5):
@@ -210,7 +210,7 @@ def calculate_c():
                 ch5res=round(ch5,4)
         elif(resvar5==100):
                 dentryvar5.set('OK')
-                ndentryvar5.set('OK')
+                ndentryvar5.set('NA')
                 ch5=resvar5-100
                 ch5res=round(ch5,4)
         elif(resvar5<98):
@@ -413,7 +413,7 @@ def result():
         setcv5=Label(transaction_details_frame03,text=getcv5,font=('times new roman',15,'bold'),fg='white',bg='grey20')
         setcv5.grid(row=4,column=2,pady=10,padx=10)
 
-        setcs1=Label(transaction_details_frame04,text=getcs1,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        '''setcs1=Label(transaction_details_frame04,text=getcs1,font=('times new roman',15,'bold'),fg='white',bg='grey20')
         setcs1.grid(row=0,column=3,pady=10,padx=10)
         setcs2=Label(transaction_details_frame04,text=getcs2,font=('times new roman',15,'bold'),fg='white',bg='grey20')
         setcs2.grid(row=1,column=3,pady=10,padx=10)
@@ -422,40 +422,40 @@ def result():
         setcs4=Label(transaction_details_frame04,text=getcs4,font=('times new roman',15,'bold'),fg='white',bg='grey20')
         setcs4.grid(row=3,column=3,pady=10,padx=10)
         setcs5=Label(transaction_details_frame04,text=getcs5,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setcs5.grid(row=4,column=3,pady=10,padx=10)
+        setcs5.grid(row=4,column=3,pady=10,padx=10)'''
 
         setdentry1=Label(transaction_details_frame05,text=d1entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setdentry1.grid(row=0,column=4,pady=10,padx=10)
+        setdentry1.grid(row=0,column=3,pady=10,padx=10)
         setdentry2=Label(transaction_details_frame05,text=d2entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setdentry2.grid(row=1,column=4,pady=10,padx=10)
+        setdentry2.grid(row=1,column=3,pady=10,padx=10)
         setdentry3=Label(transaction_details_frame05,text=d3entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setdentry3.grid(row=2,column=4,pady=10,padx=10)
+        setdentry3.grid(row=2,column=3,pady=10,padx=10)
         setdentry4=Label(transaction_details_frame05,text=d4entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setdentry4.grid(row=3,column=4,pady=10,padx=10)
+        setdentry4.grid(row=3,column=3,pady=10,padx=10)
         setdentry5=Label(transaction_details_frame05,text=d5entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setdentry5.grid(row=4,column=4,pady=10,padx=10)
+        setdentry5.grid(row=4,column=3,pady=10,padx=10)
 
         setndentry1=Label(transaction_details_frame06,text=nd1entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry1.grid(row=0,column=5,pady=10,padx=10)
+        setndentry1.grid(row=0,column=4,pady=10,padx=10)
         setndentry2=Label(transaction_details_frame06,text=nd2entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry2.grid(row=1,column=5,pady=10,padx=10)
+        setndentry2.grid(row=1,column=4,pady=10,padx=10)
         setndentry3=Label(transaction_details_frame06,text=nd3entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry3.grid(row=2,column=5,pady=10,padx=10)
+        setndentry3.grid(row=2,column=4,pady=10,padx=10)
         setndentry4=Label(transaction_details_frame06,text=nd4entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry4.grid(row=3,column=5,pady=10,padx=10)
+        setndentry4.grid(row=3,column=4,pady=10,padx=10)
         setndentry5=Label(transaction_details_frame06,text=nd5entry,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry5.grid(row=4,column=5,pady=10,padx=10)
+        setndentry5.grid(row=4,column=4,pady=10,padx=10)
 
         setndentry5=Label(transaction_details_frame07,text=getc1,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry5.grid(row=0,column=6,pady=10,padx=10)
+        setndentry5.grid(row=0,column=5,pady=10,padx=10)
         setndentry5=Label(transaction_details_frame07,text=getc2,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry5.grid(row=1,column=6,pady=10,padx=10)
+        setndentry5.grid(row=1,column=5,pady=10,padx=10)
         setndentry5=Label(transaction_details_frame07,text=getc3,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry5.grid(row=2,column=6,pady=10,padx=10)
+        setndentry5.grid(row=2,column=5,pady=10,padx=10)
         setndentry5=Label(transaction_details_frame07,text=getc4,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry5.grid(row=3,column=6,pady=10,padx=10)
+        setndentry5.grid(row=3,column=5,pady=10,padx=10)
         setndentry5=Label(transaction_details_frame07,text=getc5,font=('times new roman',15,'bold'),fg='white',bg='grey20')
-        setndentry5.grid(row=4,column=6,pady=10,padx=10)
+        setndentry5.grid(row=4,column=5,pady=10,padx=10)
 
 
 #result block
@@ -464,32 +464,38 @@ variableFrame2.pack()
 
 transaction_details_frame01=LabelFrame(variableFrame2,text='IP VAR',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame01.grid(row=0,column=0)
-var1res=Label(transaction_details_frame01,text='VAR 1',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var1res=Label(transaction_details_frame01,text='NT',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var1res.grid(row=0,column=0,pady=10,padx=10)
-var2res=Label(transaction_details_frame01,text='VAR 2',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var2res=Label(transaction_details_frame01,text='RU',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var2res.grid(row=1,column=0,pady=10,padx=10)
-var3res=Label(transaction_details_frame01,text='VAR 3',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var3res=Label(transaction_details_frame01,text='CBE',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var3res.grid(row=2,column=0,pady=10,padx=10)
-var4res=Label(transaction_details_frame01,text='VAR 4',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var4res=Label(transaction_details_frame01,text='OUB',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var4res.grid(row=3,column=0,pady=10,padx=10)
-var5res=Label(transaction_details_frame01,text='VAR 5',font=('times new roman',15,'bold'),fg='white',bg='grey20')
+var5res=Label(transaction_details_frame01,text='PD',font=('times new roman',15,'bold'),fg='white',bg='grey20')
 var5res.grid(row=4,column=0,pady=10,padx=10)
 
+#EV
 transaction_details_frame02=LabelFrame(variableFrame2,text='EV',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame02.grid(row=0,column=1)
 
+#CV
 transaction_details_frame03=LabelFrame(variableFrame2,text='CV',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame03.grid(row=0,column=2)
 
-transaction_details_frame04=LabelFrame(variableFrame2,text='C S',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
-transaction_details_frame04.grid(row=0,column=3)
+#CS
+'''transaction_details_frame04=LabelFrame(variableFrame2,text='C S',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame04.grid(row=0,column=3)'''
 
+#D_RANGE
 transaction_details_frame05=LabelFrame(variableFrame2,text='D_RANGE',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame05.grid(row=0,column=4)
 
+#ND_RANGE
 transaction_details_frame06=LabelFrame(variableFrame2,text='ND_RANGE',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame06.grid(row=0,column=5)
 
+#%C
 transaction_details_frame07=LabelFrame(variableFrame2,text='% CHANGES',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame07.grid(row=0,column=6)
 
