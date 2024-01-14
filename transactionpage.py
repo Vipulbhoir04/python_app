@@ -148,76 +148,103 @@ def calculate_c():
                 ndentryvar1.set('NA')
                 ch1=resvar1-50
                 ch1res=round(ch1,4)
+                varcom1.set('') #value here
         elif(resvar1>51 and resvar1<99):
                 dentryvar1.set('Medium')
                 ndentryvar1.set('NA')
                 ch1=resvar1-99
-                ch1res==round(ch1,4)
-        elif(resvar1>99):
+                ch1res=round(ch1,4)
+                varcom1.set('') #value here
+        elif(resvar1==100):
+                dentryvar1.set('OK')
+                ndentryvar1.set('NA')
+                ch1=resvar1-100
+                ch1res=round(ch1,4)
+                varcom1.set('As Expected')
+        elif(resvar1>99 and resvar1!=100):
                 dentryvar1.set('NA')
                 ndentryvar1.set('High')
                 ch1=resvar1-100
                 ch1res=round(ch1,4)
-        if(resvar2>=51 and resvar1<=100):
+                varcom1.set('') #value here
+        if(resvar2>=51 and resvar1<100):
                 dentryvar2.set('Medium')
                 ndentryvar2.set('NA')
                 ch2=resvar2-99
                 ch2res=round(ch2,4)
-        elif(resvar2>99):
+                varcom2.set('') #value here
+        elif(resvar2>99 and resvar2!=100):
                 dentryvar2.set('NA')
                 ndentryvar2.set('High')
                 ch2=resvar2-101
                 ch2res=round(ch2,4)
+                varcom2.set('') #value here
+        elif(resvar2==100):
+                dentryvar2.set('OK')
+                ndentryvar2.set('NA')
+                ch2=resvar2-100
+                ch2res=round(ch2,4)
+                varcom2.set('As Expected')
         elif(resvar2<=50):
                 dentryvar2.set('NA')
                 ndentryvar2.set('Low')
                 ch2=resvar2-50
                 ch2res=round(ch2,4)
+                varcom2.set('') #value here
         if(resvar3<10):
                 dentryvar3.set('Low')
                 ndentryvar3.set('NA')
                 ch3=resvar3-10
                 ch3res=round(ch3,4)
+                varcom3.set('') #value here
         elif(resvar3==100):
                 dentryvar3.set('OK')
                 ndentryvar3.set('NA')
                 ch3=resvar3-100
                 ch3res=round(ch3,4)
+                varcom3.set('As Expected')
         elif(resvar3>10):
                 dentryvar3.set('NA')
                 ndentryvar3.set('High')
                 ch3=resvar3-11
                 ch3res=round(ch3,4)
+                varcom3.set('') #value here
         if(resvar4<5):
                 dentryvar4.set('Low')
                 ndentryvar4.set('NA')
                 ch4=resvar4-5
                 ch4res=round(ch4,4)
+                varcom4.set('') #value here
         elif(resvar4==100):
                 dentryvar4.set('OK')
                 ndentryvar4.set('NA')
                 ch4=resvar4-100
                 ch4res=round(ch4,4)
+                varcom4.set('As Expected')
         elif(resvar4>5):
                 dentryvar4.set('NA')
                 ndentryvar4.set('High')
                 ch4=resvar4-6
                 ch4res=round(ch4,4)
+                varcomr4.set('') #value here
         if(resvar5>98 and resvar5!=100):
                 dentryvar5.set('High')
                 ndentryvar5.set('NA')
                 ch5=resvar5-99
                 ch5res=round(ch5,4)
+                varcom5.set('') #value here
         elif(resvar5==100):
                 dentryvar5.set('OK')
                 ndentryvar5.set('NA')
                 ch5=resvar5-100
                 ch5res=round(ch5,4)
+                varcom5.set('As Expected')
         elif(resvar5<98):
                 dentryvar5.set('NA')
                 ndentryvar5.set('Low')
                 ch5=resvar5-98
                 ch5res=round(ch5,4)
+                varcom5.set('') #value here
 
         #%C values block
         varc1.set(ch1res)
@@ -244,11 +271,11 @@ var3cs=StringVar()
 var4cs=StringVar()
 var5cs=StringVar()
 
-var1cs.set('NULL')
-var2cs.set('NULL')
-var3cs.set('NULL')
-var4cs.set('NULL')
-var5cs.set('NULL')
+var1cs.set('0')
+var2cs.set('0')
+var3cs.set('0')
+var4cs.set('0')
+var5cs.set('0')
 
 transaction_details_frame4=LabelFrame(variableFrame,text='C S',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame4.grid(row=0,column=3)
@@ -333,11 +360,11 @@ varc3=StringVar()
 varc4=StringVar()
 varc5=StringVar()
 
-varc1.set('NULL')
-varc2.set('NULL')
-varc3.set('NULL')
-varc4.set('NULL')
-varc5.set('NULL')
+varc1.set('0')
+varc2.set('0')
+varc3.set('0')
+varc4.set('0')
+varc5.set('0')
 
 transaction_details_frame7=LabelFrame(variableFrame,text='% CHANGES',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame7.grid(row=0,column=6)
@@ -351,6 +378,33 @@ csvar4=Label(transaction_details_frame7,textvariable=varc4,font=('arial',15),bd=
 csvar4.grid(row=3,column=5,pady=9,padx=7)
 csvar5=Label(transaction_details_frame7,textvariable=varc5,font=('arial',15),bd=7,width=15)
 csvar5.grid(row=4,column=5,pady=9,padx=7)
+
+#COMMENTS BLOCK
+varcom1=StringVar()
+varcom2=StringVar()
+varcom3=StringVar()
+varcom4=StringVar()
+varcom5=StringVar()
+
+varcom1.set('-')
+varcom2.set('-')
+varcom3.set('-')
+varcom4.set('-')
+varcom5.set('-')
+
+transaction_details_frame8=LabelFrame(variableFrame,text='COMMENTS',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame8.grid(row=0,column=7)
+comvar1=Label(transaction_details_frame8,textvariable=varcom1,font=('arial',15),bd=7,width=15)
+comvar1.grid(row=0,column=6,pady=9,padx=7)
+comvar2=Label(transaction_details_frame8,textvariable=varcom2,font=('arial',15),bd=7,width=15)
+comvar2.grid(row=1,column=6,pady=9,padx=7)
+comvar3=Label(transaction_details_frame8,textvariable=varcom3,font=('arial',15),bd=7,width=15)
+comvar3.grid(row=2,column=6,pady=9,padx=7)
+comvar4=Label(transaction_details_frame8,textvariable=varcom4,font=('arial',15),bd=7,width=15)
+comvar4.grid(row=3,column=6,pady=9,padx=7)
+comvar5=Label(transaction_details_frame8,textvariable=varcom5,font=('arial',15),bd=7,width=15)
+comvar5.grid(row=4,column=6,pady=9,padx=7)
+
 
 
 #result block function
@@ -390,6 +444,12 @@ def result():
         getc3=varc3.get()
         getc4=varc4.get()
         getc5=varc5.get()
+
+        com1var=varcom1.get()
+        com2var=varcom2.get()
+        com3var=varcom3.get()
+        com4var=varcom4.get()
+        com5var=varcom5.get()
 
         setev1=Label(transaction_details_frame02,text=getev1,font=('times new roman',15,'bold'),fg='white',bg='grey20')
         setev1.grid(row=0,column=1,pady=10,padx=10)
@@ -457,8 +517,19 @@ def result():
         setndentry5=Label(transaction_details_frame07,text=getc5,font=('times new roman',15,'bold'),fg='white',bg='grey20')
         setndentry5.grid(row=4,column=5,pady=10,padx=10)
 
+        setvarcom1=Label(transaction_details_frame08,text=com1var,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        setvarcom1.grid(row=0,column=6,pady=10,padx=10)
+        setvarcom2=Label(transaction_details_frame08,text=com2var,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        setvarcom2.grid(row=1,column=6,pady=10,padx=10)
+        setvarcom3=Label(transaction_details_frame08,text=com3var,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        setvarcom3.grid(row=2,column=6,pady=10,padx=10)
+        setvarcom4=Label(transaction_details_frame08,text=com4var,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        setvarcom4.grid(row=3,column=6,pady=10,padx=10)
+        setvarcom5=Label(transaction_details_frame08,text=com5var,font=('times new roman',15,'bold'),fg='white',bg='grey20')
+        setvarcom5.grid(row=4,column=6,pady=10,padx=10)
 
-#result block
+
+#RESULT BLOCK  MAIN FRAME
 variableFrame2=LabelFrame(root,text='RESULT',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 variableFrame2.pack()
 
@@ -498,6 +569,10 @@ transaction_details_frame06.grid(row=0,column=5)
 #%C
 transaction_details_frame07=LabelFrame(variableFrame2,text='% CHANGES',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
 transaction_details_frame07.grid(row=0,column=6)
+
+#COMMENTS
+transaction_details_frame08=LabelFrame(variableFrame2,text='% CHANGES',font=('times new roman',15,'bold'),fg='gold',bd=8,relief=GROOVE,bg='grey20')
+transaction_details_frame08.grid(row=0,column=7)
 
 
 #BUTTON
